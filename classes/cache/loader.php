@@ -26,14 +26,12 @@ namespace format_designer\cache;
 
 defined('MOODLE_INTERNAL') || die();
 
-if (version_compare($CFG->version, '2024100700', '<')) {
-    require_once($CFG->dirroot.'/cache/classes/loaders.php');
-}
+use core_cache\application_cache;
 
 /**
  * Custom cache loader to handle the smart menus and items deletion.
  */
-class loader extends \cache_application {
+class loader extends application_cache {
 
     /**
      * Delete the cached menus or menu items for all of its users.
@@ -44,7 +42,8 @@ class loader extends \cache_application {
      *
      * Delete all the files using delete_many method.
      *
-     * @param int $id ID of the menu or item.
+     * @param int $courseid Course id.
+     * @param int $sectionid Section id.
      * @return void
      */
     public function delete_vaild_section_completed_cache($courseid, $sectionid = 0) {

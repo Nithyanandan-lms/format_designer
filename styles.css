@@ -3440,19 +3440,23 @@ li.section.main.section-background-color:not(.section-header-image)
 }
 
 /** Moodle -4.5**/
-.format-designer.format-designer-single-section .course-content ul.designer li.section.section-type-default .section-header-content .sectionname .inplaceeditable {
+.format-designer.format-designer-single-section .course-content ul.designer li.section.section-type-default
+.section-header-content .sectionname .inplaceeditable {
     display: flex;
 }
-.format-designer.editing .designer:not(.kanban-board) .section .content .section.link-layout li.activity:not(.subsection) .mod-indent-outer > div {
+.format-designer.editing .designer:not(.kanban-board) .section .content .section.link-layout li.activity:not(.subsection)
+.mod-indent-outer > div {
     display: flex;
 }
-.format-designer .designer .section .content .section.link-layout.designer-section-content li.activity.subsection .activityinstance {
+.format-designer .designer .section .content .section.link-layout.designer-section-content li.activity.subsection
+.activityinstance {
     width: auto;
     min-width: auto;
     padding: 0;
     display: none;
 }
-.format-designer .designer:not(.kanban-board) .section .content .section.link-layout li.activity .mod-indent-outer .col.align-self-center {
+.format-designer .designer:not(.kanban-board) .section .content .section.link-layout li.activity
+.mod-indent-outer .col.align-self-center {
     display: flex;
     align-items: center;
 }
@@ -3469,12 +3473,14 @@ li.section.main.section-background-color:not(.section-header-image)
 .format-designer .designer.kanban-board .section .content .section.link-layout li.activity.subsection .mod-indent-outer {
     padding: 0;
 }
-.format-designer .designer.kanban-board .section .content .section.link-layout li.activity.subsection .mod-indent-outer .course-section {
+.format-designer .designer.kanban-board .section .content .section.link-layout li.activity.subsection
+.mod-indent-outer .course-section {
     min-width: auto;
     padding: 0;
     margin: 0;
 }
-.format-designer .designer.kanban-board .section .content .section.link-layout li.activity.subsection .mod-indent-outer .course-section .section-item {
+.format-designer .designer.kanban-board .section .content .section.link-layout li.activity.subsection
+.mod-indent-outer .course-section .section-item {
     padding: 6px;
 }
 .format-designer .course-content ul.designer li.section.main .subsection .course-section {

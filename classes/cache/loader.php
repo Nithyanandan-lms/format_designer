@@ -143,12 +143,11 @@ if (version_compare($CFG->version, '2024100700', '<')) {
         }
     }
 } else {
-    use core_cache\application_cache;
 
     /**
      * Custom cache loader to handle the smart menus and items deletion.
      */
-    class loader extends application_cache {
+    class loader extends \core_cache\application_cache {
         // Methods will go here
         /**
          * Delete the cached menus or menu items for all of its users.

@@ -636,6 +636,7 @@ body.format-designer.editing ul.designer .section .circles-layout .activity .edi
 .format-designer.editing .course-content ul.designer li.section .section-header-content .sectionname
 .inplaceeditable .quickeditlink .quickediticon {
     margin-left: 5px;
+    margin-top: 0;
 }
 .format-designer .course-content .designer li.section .section-header-content a {
     text-decoration: none;
@@ -709,7 +710,7 @@ span.section-collapse-icon:before {
     vertical-align: middle;
 }
 .format-designer.path-course-view.pagelayout-course #page {
-    height: 100%;
+    /* height: 100%; */
     background-color: transparent;
 }
 .format-designer #page #page-content section#region-main {
@@ -3447,6 +3448,7 @@ li.section.main.section-background-color:not(.section-header-image)
 .format-designer.editing .designer:not(.kanban-board) .section .content .section.link-layout li.activity:not(.subsection)
 .mod-indent-outer > div {
     display: flex;
+    align-items: center;
 }
 .format-designer .designer .section .content .section.link-layout.designer-section-content li.activity.subsection
 .activityinstance {

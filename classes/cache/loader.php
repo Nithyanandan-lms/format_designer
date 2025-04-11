@@ -151,12 +151,13 @@ if (version_compare($CFG->version, '2024100700', '<')) {
     }
 } else {
     /**
-     * This class is not used directly but is required to avoid namespace conflicts.
-     * The actual implementation is in the version-specific code above.
+     * Custom cache loader for newer Moodle versions that use the core_cache namespace.
+     * This class extends the application_cache class from the core_cache namespace.
      */
     class loader_newer extends \core_cache\application_cache {
         use loader_common_methods;
     }
+
     // Use class_alias to create the loader class with the correct parent.
     class_alias('format_designer\cache\loader_newer', 'format_designer\cache\loader');
 }

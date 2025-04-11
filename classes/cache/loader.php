@@ -141,20 +141,22 @@ trait loader_common_methods {
     }
 }
 
-
 if (version_compare($CFG->version, '2024100700', '<')) {
     require_once($CFG->dirroot.'/cache/classes/loaders.php');
     /**
-     * Custom cache loader to handle the smart menus and items deletion.
+     * Custom cache loader to handle the smart menus and items deletion for older Moodle versions.
      */
     class loader extends \cache_application {
         use loader_common_methods;
     }
 } else {
     /**
-     * Custom cache loader to handle the smart menus and items deletion.
+     * This class is not used directly but is required to avoid namespace conflicts.
+     * The actual implementation is in the version-specific code above.
      */
-    class loader extends \core_cache\application_cache {
+    class loader_newer extends \core_cache\application_cache {
         use loader_common_methods;
     }
+    // Use class_alias to create the loader class with the correct parent.
+    class_alias('format_designer\cache\loader_newer', 'format_designer\cache\loader');
 }

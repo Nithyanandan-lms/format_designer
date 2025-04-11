@@ -150,6 +150,16 @@ if (version_compare($CFG->version, '2024100700', '<')) {
         use loader_common_methods;
     }
 } else {
+
+    /**
+     * Format Designer - Custom cache loader newer class.
+     *
+     * @package   format_designer
+     * @copyright 2021 bdecent gmbh <https://bdecent.de>
+     * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+     */
+
+
     /**
      * Custom cache loader for newer Moodle versions that use the core_cache namespace.
      * This class extends the application_cache class from the core_cache namespace.
